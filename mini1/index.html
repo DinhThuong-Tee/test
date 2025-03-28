@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.w3schools.com/lib/w3-theme-black.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/fonts/fontawesome-free-6.7.2-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/info_course.css" />
+    <style>
+      html,
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Roboto", sans-serif;
+      }
+      .w3-sidebar {
+        z-index: 3;
+        width: 250px;
+        top: 43px;
+        bottom: 0;
+        height: inherit;
+      }
+    </style>
+  </head>
+
+  <body <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large navbar-color">
+        <a
+          class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+          href="javascript:void(0)"
+          onclick="w3_open()"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-theme-l1 navbar-color navbar__item-border navbar__active"
+          href="javascript:void(0)"
+          onclick="showContent('logo')"
+        >
+          <i class="fa-solid fa-house"></i>
+        </a>
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          href="javascript:void(0)"
+          onclick="showContent('infoCourse')"
+          >Thông tin môn học</a
+        >
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          href="javascript:void(0)"
+          onclick="showContent('infoTech')"
+          >Các công nghệ web</a
+        >
+        <a
+          href="#"
+          class="w3-bar-item w3-button w3-hide-small w3-hover-white"
+          href="javascript:void(0)"
+          onclick="showContent('infoStudent')"
+          >Thông tin sinh viên</a
+        >
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav
+      class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large"
+        title="Close Menu"
+      >
+        <i class="fa fa-remove"></i>
+      </a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left: 250px">
+      <div class="main-content">
+        <!-- Section logo -->
+        <div id="logo" class="container content-container">
+          <header>
+            <div class="w3-container header-title"></div>
+          </header>
+
+          <div class="info-content">
+            <div id="classInfoOpening" class="container info-container">
+              <div class="class-info">
+                <div class="class-info__custom">Thông tin khai giảng</div>
+                <div class="class-info__content">
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Thứ:</div>
+                        <span class="class-info__item-value"> sáng thứ 4 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Thời gian/Tiết:
+                        </div>
+                        <span class="class-info__item-value">
+                          Tiết 3 đến tiết 6
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Ngày/Tuần:</div>
+                        <span class="class-info__item-value">
+                          Tuần: 24-31, 33-41
+                        </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Địa điểm:</div>
+                        <span class="class-info__item-value"> TC 312 </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="classInfoSeminar" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__custom">Thông tin lớp</div>
+                <div class="class-info__content">
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Mã lớp:</div>
+                        <span class="class-info__item-value"> 157543 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Loại hình:</div>
+                        <span class="class-info__item-value"> LT+BT </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Kỳ:</div>
+                        <span class="class-info__item-value"> AB </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">GVHD:</div>
+                        <span class="class-info__item-value">
+                          Phạm Huy Hoàng
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Số lần vắng:</div>
+                        <span class="class-info__item-value"> 0 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Số sinh viên:</div>
+                        <span class="class-info__item-value"> 112 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Hình thức giáo dục:
+                        </div>
+                        <span class="class-info__item-value"> Offline </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="company" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__custom">Thông tin công ty quan tâm</div>
+                <div class="company-content">
+                  <div class="company-content__left">
+                    <ul>
+                      <li><strong>Công ty: </strong>Garena</li>
+                    </ul>
+                    <p>
+                      Garena là một công ty công nghệ và giải trí trực tuyến nổi
+                      tiếng, được thành lập vào năm 2009 tại Singapore. Garena
+                      chuyên cung cấp các dịch vụ game, nền tảng giao dịch trực
+                      tuyến và các sản phẩm giải trí số. Công ty là nhà phát
+                      hành của các trò chơi phổ biến như Free Fire, League of
+                      Legends, và Call of Duty: Mobile. Bên cạnh đó, Garena còn
+                      hoạt động trong lĩnh vực thanh toán điện tử qua GarenaPay
+                      và các dịch vụ thương mại điện tử. Garena hiện thuộc sở
+                      hữu của Sea Group (trước đây là Garena Group), một tập
+                      đoàn đa quốc gia chuyên về công nghệ.
+                    </p>
+                    <p>
+                      Garena nổi bật trong ngành công nghiệp game nhờ vào việc
+                      phát triển và phân phối các trò chơi trực tuyến có sức hút
+                      lớn, không chỉ tại khu vực Đông Nam Á mà còn mở rộng ra
+                      toàn cầu. Các trò chơi của Garena, đặc biệt là Free Fire,
+                      đã đạt được sự thành công vang dội, với hàng triệu người
+                      chơi trên khắp thế giới. Điều này giúp công ty không chỉ
+                      xây dựng một cộng đồng game thủ đông đảo mà còn tạo ra một
+                      hệ sinh thái game phát triển mạnh mẽ.
+                    </p>
+                    <p>
+                      Ngoài lĩnh vực game, Garena còn tham gia vào nhiều hoạt
+                      động kinh doanh khác, bao gồm các dịch vụ trực tuyến như
+                      thương mại điện tử, thanh toán điện tử và phát triển phần
+                      mềm. Công ty cũng chú trọng vào việc cải tiến và tối ưu
+                      hóa các nền tảng của mình để phục vụ người dùng tốt hơn,
+                      đồng thời tạo ra các cơ hội hợp tác với các đối tác lớn
+                      trong ngành công nghệ. Garena đang dần khẳng định vị thế
+                      của mình như một trong những công ty dẫn đầu trong lĩnh
+                      vực công nghệ và giải trí số tại Đông Nam Á.
+                    </p>
+                  </div>
+                  <a
+                    class="company-content__right"
+                    href="https://www.garena.vn/"
+                    target="_blank"
+                  >
+                    <div class="FRB" style="width: 100%">
+                      <img
+                        class="DRB"
+                        src="https://www.ftu.edu.vn/images/2023/Thang7/21/1/2.png"
+                        style="width: 100%"
+                      />
+                      <div class="ERB" style="width: 100%; color: red" title="">
+                        GARENA TUYỂN DỤNG
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section infoCourse -->
+        <div id="infoCourse" class="container content-container hidden">
+          <header>
+            <div class="w3-container header-title">
+              <p>Thông tin môn học</p>
+            </div>
+          </header>
+
+          <div class="info-content">
+            <div id="classInfo" class="container info-container">
+              <div class="class-info">
+                <div class="class-info__custom">Thông tin chung</div>
+                <div class="class-info__content">
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Đơn vị:</div>
+                        <span class="class-info__item-value">
+                          Trường công nghệ thông tin và truyền thông
+                        </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Đơn vị con:</div>
+                        <span class="class-info__item-value">
+                          Khoa Kỹ thuật Máy tính, Khoa Khoa học Máy tính
+                        </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Mã Học Phần:</div>
+                        <span class="class-info__item-value"> IT4409 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Tên học phần:</div>
+                        <span class="class-info__item-value">
+                          Công nghệ web và dịch vụ trực tuyến
+                        </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Tên tiếng anh:</div>
+                        <span class="class-info__item-value">
+                          Web technologies and e-Services
+                        </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Hệ đào tạo:</div>
+                        <span class="class-info__item-value">
+                          Thạc sỹ Khoa học, Kỹ sư chính quy, Cử nhân, Việt-Nhật
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Ngành đào tạo:</div>
+                        <span class="class-info__item-value"> _ _ _ </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Loại hình:</div>
+                        <span class="class-info__item-value"> Lớp </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Điều phối viên:
+                        </div>
+                        <span class="class-info__item-value">
+                          Phạm Huy Hoàng
+                        </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Nhóm chuyên môn:
+                        </div>
+                        <span class="class-info__item-value">
+                          Phạm Huy Hoàng
+                        </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Học phần liên quan:
+                        </div>
+                        <span class="class-info__item-value"> _ _ _ </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="studySectionInfo" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__custom">Phân bổ học phần</div>
+                <div class="class-info__content">
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Hệ số điểm thực hành:
+                        </div>
+                        <span class="class-info__item-value"> 0 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Số tín chỉ:</div>
+                        <span class="class-info__item-value"> 3 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Số giờ LT:</div>
+                        <span class="class-info__item-value"> 2 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Số giờ BT:</div>
+                        <span class="class-info__item-value"> 2 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Số giờ TH/TN:</div>
+                        <span class="class-info__item-value"> 0 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Số giờ tự học:</div>
+                        <span class="class-info__item-value"> 6 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Hình thức thi cuối kỳ:
+                        </div>
+                        <span class="class-info__item-value">
+                          Thi trên máy tính
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-info__content-item">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Số giờ thực tập:
+                        </div>
+                        <span class="class-info__item-value"> _ _ _ </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">KHD thực tập:</div>
+                        <span class="class-info__item-value"> _ _ _ </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">KHD đồ án:</div>
+                        <span class="class-info__item-value"> _ _ _ </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Phân bổ:</div>
+                        <span class="class-info__item-value"> 3(2-2-0-6) </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="summaryVN" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__content one-row">
+                  <div class="class-info__content-item__ver2 one-row">
+                    <div>
+                      Mô tả tóm tắt học phần (Tiếng Việt)<span
+                        style="color: red"
+                      >
+                        *</span
+                      >
+                    </div>
+                  </div>
+                  <div class="class-info__content-item__ver3 one-row">
+                    <div style="text-align: justify">
+                      <div style="font-weight: 600">
+                        Mục tiêu:
+                        <span style="color: #1677ff; font-weight: 400">
+                          Học phần cung cấp các kiến thức cần thiết để xây dựng
+                          và phát triển các ứng dụng, dịch vụ trực tuyến trên
+                          môi trường web. Sau khi học xong học phần này, sinh
+                          viên có khả năng:
+                        </span>
+                      </div>
+                      <p
+                        style="
+                          margin-top: 3pt;
+                          margin-right: 0cm;
+                          margin-bottom: 0cm;
+                          margin-left: 36pt;
+                          text-align: justify;
+                          text-indent: -18pt;
+                          mso-list: l0 level1 lfo1;
+                        "
+                      >
+                        <span style="padding-right: 12px"> ● </span>
+                        <span>
+                          Có thể sử dụng một ngôn ngữ lập trình như JSP,&nbsp;
+                          PHP để phát triển ứng dụng web cho các lĩnh vực khác
+                          nhau như: hệ quản trị nội dung (CMS), cổng thông tin
+                          (Portal), hay các ứng dụng điện tử (eCommerce,
+                          eLearning, eGoverment,…)
+                        </span>
+                      </p>
+                      <p
+                        style="
+                          margin-top: 3pt;
+                          margin-right: 0cm;
+                          margin-bottom: 0cm;
+                          margin-left: 36pt;
+                          text-align: justify;
+                          text-indent: -18pt;
+                          mso-list: l0 level1 lfo1;
+                        "
+                      >
+                        <span style="padding-right: 12px"> ● </span>
+                        <span>
+                          Nắm vững được các công nghệ web, các platform,
+                          framework hiện đang thịnh hành.
+                        </span>
+                      </p>
+                      <p
+                        style="
+                          margin-top: 3pt;
+                          margin-right: 0cm;
+                          margin-bottom: 0cm;
+                          text-align: justify;
+                          mso-list: l0 level1 lfo1;
+                        "
+                      >
+                        <span>
+                          Ngoài ra học phần cũng cung cấp cho sinh viên các kỹ
+                          năng làm việc nhóm, thuyết trình và thái độ cần thiết
+                          để làm việc và ứng dụng các kỹ thuật trong các dự án,
+                          công ty về phần mềm sau này.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="summaryEN" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__content one-row">
+                  <div class="class-info__content-item__ver2 one-row">
+                    <div>
+                      Mô tả tóm tắt học phần (Tiếng Anh)<span
+                        style="color: red"
+                      >
+                        *</span
+                      >
+                    </div>
+                  </div>
+                  <div class="class-info__content-item__ver3 one-row">
+                    <div style="text-align: justify">
+                      <div style="font-weight: 600">
+                        Objectives:
+                        <span style="color: #1677ff; font-weight: 400">
+                          The course provides students with the necessary
+                          knowledge to build and develop online applications and
+                          services on the web environment. After completing this
+                          couse, students are able to:
+                        </span>
+                      </div>
+                      <p
+                        style="
+                          margin-top: 3pt;
+                          margin-right: 0cm;
+                          margin-bottom: 0cm;
+                          margin-left: 36pt;
+                          text-indent: -18pt;
+                          text-align: justify;
+                          mso-list: l0 level1 lfo1;
+                        "
+                      >
+                        <span style="padding-right: 12px"> ● </span>
+                        <span>
+                          Use a programming language such as JSP, PHP to develop
+                          web applications for different areas such as content
+                          management system (CMS), portal, or online
+                          applications (eCommerce, eLearning, eGoverment, ...)
+                        </span>
+                      </p>
+                      <p
+                        style="
+                          margin-top: 3pt;
+                          margin-right: 0cm;
+                          margin-bottom: 0cm;
+                          margin-left: 36pt;
+                          text-align: justify;
+                          text-indent: -18pt;
+                          mso-list: l0 level1 lfo1;
+                        "
+                      >
+                        <span style="padding-right: 12px"> ● </span>
+                        <span>
+                          Understand the popular web technologies, platforms,
+                          frameworks.
+                        </span>
+                      </p>
+                      <p
+                        style="
+                          margin-top: 3pt;
+                          margin-right: 0cm;
+                          margin-bottom: 0cm;
+                          text-align: justify;
+                          mso-list: l0 level1 lfo1;
+                        "
+                      >
+                        <span>
+                          In addition, the course also provides students with
+                          skills of teamwork and presentation, and attitudes
+                          needed to work and apply the techniques in software
+                          projects and companies in the future.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="contentVN" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__content one-row">
+                  <div class="class-info__content-item__ver2 one-row">
+                    <div>
+                      Nội dung tóm tắt học phần (Tiếng Việt)<span
+                        style="color: red"
+                      >
+                        *</span
+                      >
+                    </div>
+                  </div>
+                  <div class="class-info__content-item__ver3 one-row">
+                    <div style="text-align: justify">
+                      <div style="font-weight: 600">
+                        <span style="color: #1677ff; font-weight: 400">
+                          Internet, web, architecture of web application, HTML,
+                          CSS, Javascript, PHP, JSP, Ajax, DOM, XML, SOA,
+                          website security, v.v.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="contentEN" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__content one-row">
+                  <div class="class-info__content-item__ver2 one-row">
+                    <div>
+                      Nội dung tóm tắt học phần (Tiếng Anh)<span
+                        style="color: red"
+                      >
+                        *</span
+                      >
+                    </div>
+                  </div>
+                  <div class="class-info__content-item__ver3 one-row">
+                    <div style="text-align: justify">
+                      <div style="font-weight: 600">
+                        <span style="color: #1677ff; font-weight: 400">
+                          Internet, web, architecture of web application, HTML,
+                          CSS, Javascript, PHP, JSP, Ajax, DOM, XML, SOA,
+                          website security, etc.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="materialClass" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__content one-row">
+                  <div
+                    class="class-info__content-item__ver2 one-row"
+                    style="padding: 0 12px"
+                  >
+                    <div class="class-info__file">
+                      <div>
+                        Đề cương chi tiết của học phần<span style="color: red">
+                          *</span
+                        >
+                      </div>
+                      <button type="button" class="class-info__file-button">
+                        <span>1 tệp đính kèm</span>
+                        <span class="file-button__icon">
+                          <i class="fa-solid fa-angle-down"></i>
+                        </span>
+                      </button>
+                      <div class="class-info__file-dropdown">
+                        <ul class="class-info__file-dropdown-list">
+                          <li class="class-info__file-dropdown-item">
+                            it4409-webtechnologiesande-services-2019.04.25_-_mo_ta_tieng_anh_19.0k.docx
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="class-info__content-item__ver2 one-row"
+                    style="padding: 0 12px"
+                  >
+                    <div class="class-info__file">
+                      <div>
+                        Sách giáo trình, sách tham khảo<span style="color: red">
+                          *</span
+                        >
+                      </div>
+                      <button type="button" class="class-info__file-button">
+                        <span>0 danh mục</span>
+                        <span class="file-button__icon">
+                          <i class="fa-solid fa-angle-down"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="class-info__content-item__ver2 one-row"
+                    style="padding: 0 12px"
+                  >
+                    <div class="class-info__file">
+                      <div>
+                        Bài giảng hoặc slide bài giảng<span style="color: red">
+                          *</span
+                        >
+                      </div>
+                      <button type="button" class="class-info__file-button">
+                        <span>7 tệp đính kèm</span>
+                        <span class="file-button__icon">
+                          <i class="fa-solid fa-angle-down"></i>
+                        </span>
+                      </button>
+                      <div class="class-info__file-dropdown">
+                        <ul class="class-info__file-dropdown-list">
+                          <li class="class-info__file-dropdown-item">
+                            handout_01._web_introduction_2.2m.pdf
+                          </li>
+                          <li class="class-info__file-dropdown-item">
+                            handout_01._web_introduction_2.2m.pdf
+                          </li>
+                          <li class="class-info__file-dropdown-item">
+                            handout_01._web_introduction_2.2m.pdf
+                          </li>
+                          <li class="class-info__file-dropdown-item">
+                            handout_01._web_introduction_2.2m.pdf
+                          </li>
+                          <li class="class-info__file-dropdown-item">
+                            handout_01._web_introduction_2.2m.pdf
+                          </li>
+                          <li class="class-info__file-dropdown-item">
+                            handout_01._web_introduction_2.2m.pdf
+                          </li>
+                          <li class="class-info__file-dropdown-item">
+                            handout_01._web_introduction_2.2m.pdf
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="class-info__content-item__ver2 one-row"
+                    style="padding: 0 12px"
+                  >
+                    <div class="class-info__file">
+                      <div>
+                        Tài liệu tham khảo khác (nếu có)<span
+                          style="color: red"
+                        >
+                          *</span
+                        >
+                      </div>
+                      <button type="button" class="class-info__file-button">
+                        <span>0 tệp đính kèm</span>
+                        <span class="file-button__icon">
+                          <i class="fa-solid fa-angle-down"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section infoTeach -->
+        <div id="infoTech" class="container content-container hidden">
+          <header>
+            <div class="w3-container header-title">
+              <p>Các công nghệ web</p>
+            </div>
+          </header>
+          <p>
+            Dưới đây là các công nghệ phổ biến được sử dụng trong xây dựng ứng
+            dụng Web:
+          </p>
+          <div id="frontend">
+            <h3>1. Frontend (Giao diện người dùng)</h3>
+            <ul>
+              <li>
+                <strong>HTML, CSS, JavaScript</strong>: Các công nghệ cơ bản để
+                xây dựng cấu trúc và giao diện người dùng.
+              </li>
+              <li>
+                <strong>ReactJS</strong>: Thư viện JavaScript để xây dựng giao
+                diện người dùng động.
+              </li>
+              <li>
+                <strong>Angular</strong>: Framework JavaScript mạnh mẽ cho các
+                ứng dụng Web quy mô lớn.
+              </li>
+              <li>
+                <strong>Vue.js</strong>: Framework linh hoạt giúp phát triển
+                giao diện người dùng hiệu quả.
+              </li>
+              <li>
+                <strong>CSS Preprocessors (SASS, LESS)</strong>: Giúp cải thiện
+                mã CSS với các tính năng như biến và hàm.
+              </li>
+              <li>
+                <strong>Responsive Design</strong>: Thiết kế giao diện phù hợp
+                với mọi kích thước màn hình (sử dụng Bootstrap, Tailwind CSS).
+              </li>
+            </ul>
+          </div>
+
+          <div id="backend">
+            <h3>2. Backend (Máy chủ và xử lý dữ liệu)</h3>
+            <ul>
+              <li>
+                <strong>Node.js</strong>: Môi trường runtime JavaScript hiệu quả
+                cho ứng dụng Web.
+              </li>
+              <li>
+                <strong>Express.js</strong>: Framework giúp xây dựng API và xử
+                lý các yêu cầu HTTP nhanh chóng.
+              </li>
+              <li>
+                <strong>Django (Python)</strong>: Framework Python phù hợp cho
+                các ứng dụng Web cần bảo mật cao.
+              </li>
+              <li>
+                <strong>Ruby on Rails</strong>: Framework giúp phát triển ứng
+                dụng Web nhanh chóng và dễ dàng bảo trì.
+              </li>
+              <li>
+                <strong>Java Spring Boot</strong>: Framework mạnh mẽ cho ứng
+                dụng Web Java với khả năng mở rộng cao.
+              </li>
+            </ul>
+          </div>
+
+          <div id="database">
+            <h3>3. Cơ sở dữ liệu</h3>
+            <ul>
+              <li><strong>MySQL</strong>: Cơ sở dữ liệu quan hệ phổ biến.</li>
+              <li>
+                <strong>PostgreSQL</strong>: Cơ sở dữ liệu mạnh mẽ hỗ trợ truy
+                vấn phức tạp.
+              </li>
+              <li>
+                <strong>MongoDB</strong>: Cơ sở dữ liệu NoSQL linh hoạt cho dữ
+                liệu phi cấu trúc.
+              </li>
+              <li>
+                <strong>Cassandra</strong>: Cơ sở dữ liệu NoSQL phân tán phù hợp
+                cho dữ liệu lớn.
+              </li>
+            </ul>
+          </div>
+
+          <div id="api">
+            <h3>4. API và Tích hợp dịch vụ</h3>
+            <ul>
+              <li>
+                <strong>RESTful APIs</strong>: Phương thức phổ biến để giao tiếp
+                giữa các hệ thống qua HTTP.
+              </li>
+              <li>
+                <strong>GraphQL</strong>: Công nghệ API mạnh mẽ giúp lấy dữ liệu
+                theo yêu cầu.
+              </li>
+              <li>
+                <strong>WebSockets</strong>: Giải pháp cho các ứng dụng thời
+                gian thực.
+              </li>
+            </ul>
+          </div>
+
+          <div id="devops">
+            <h3>5. DevOps và Triển khai</h3>
+            <ul>
+              <li>
+                <strong>Docker</strong>: Giải pháp đóng gói ứng dụng và môi
+                trường vào container.
+              </li>
+              <li>
+                <strong>CI/CD</strong>: Tự động hóa quy trình kiểm thử và triển
+                khai (Jenkins, GitLab CI, GitHub Actions).
+              </li>
+              <li>
+                <strong>AWS, Azure, Google Cloud</strong>: Các dịch vụ đám mây
+                linh hoạt cho phát triển và triển khai ứng dụng Web.
+              </li>
+            </ul>
+          </div>
+
+          <div id="security"></div>
+          <h3>6. Bảo mật</h3>
+          <ul>
+            <li>
+              <strong>OAuth2 & JWT</strong>: Cơ chế xác thực và phân quyền người
+              dùng an toàn.
+            </li>
+            <li>
+              <strong>HTTPS</strong>: Đảm bảo giao tiếp an toàn qua mã hóa
+              SSL/TLS.
+            </li>
+            <li>
+              <strong>Helmet.js</strong>: Thư viện Node.js tăng cường bảo mật
+              HTTP header.
+            </li>
+          </ul>
+
+          <div id="testing">
+            <h3>7. Testing và Debugging</h3>
+            <ul>
+              <li>
+                <strong>Jest</strong>: Công cụ kiểm thử JavaScript, thường dùng
+                với React và Node.js.
+              </li>
+              <li>
+                <strong>Mocha & Chai</strong>: Framework kiểm thử cho Node.js.
+              </li>
+              <li>
+                <strong>Cypress</strong>: Công cụ kiểm thử tích hợp mạnh mẽ cho
+                các ứng dụng Web.
+              </li>
+              <li>
+                <strong>Postman</strong>: Công cụ kiểm thử API và làm việc với
+                RESTful API.
+              </li>
+            </ul>
+          </div>
+
+          <div id="optimization">
+            <h3>8. Performance Optimization</h3>
+            <ul>
+              <li>
+                <strong>Lazy Loading</strong>: Tải tài nguyên theo yêu cầu để
+                cải thiện tốc độ tải trang.
+              </li>
+              <li>
+                <strong>CDN (Content Delivery Network)</strong>: Mạng phân phối
+                nội dung giúp giảm độ trễ và cải thiện tốc độ.
+              </li>
+              <li>
+                <strong>Caching</strong>: Sử dụng Redis hoặc Memcached để lưu
+                trữ dữ liệu tạm thời và giảm tải cho server.
+              </li>
+            </ul>
+          </div>
+
+          <div id="authentication">
+            <h3>9. User Authentication & Authorization</h3>
+            <ul>
+              <li>
+                <strong>Firebase Authentication</strong>: Dịch vụ đăng nhập
+                thông qua Google, Facebook, email/password.
+              </li>
+              <li>
+                <strong>Auth0</strong>: Dịch vụ bảo mật giúp quản lý xác thực và
+                phân quyền người dùng dễ dàng.
+              </li>
+            </ul>
+          </div>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web"
+            target="_blank"
+          >
+            <img
+              width="50%"
+              src="https://wallpapers.com/images/featured/information-technology-background-yj5lntx9lzio3yiz.jpg"
+              alt=""
+            />
+            <p style="color: red">Các công nghệ web</p>
+          </a>
+        </div>
+        <!-- Section infoStudent -->
+        <div id="infoStudent" class="container content-container hidden">
+          <header>
+            <div class="w3-container header-title">
+              <p>Thông tin sinh viên</p>
+            </div>
+          </header>
+          <div class="info-content">
+            <div id="student-info" class="container info-container">
+              <div class="class-info">
+                <div class="student-info" style="height: 50%">
+                  <div class="left">
+                    <img
+                      src="./assets/images/tung.jpg"
+                      alt="Student Photo"
+                      class="profile-photo"
+                    />
+                  </div>
+                  <div class="right">
+                    <div class="details">
+                      <span>Họ và tên:</span> Nguyễn Ngọc Tùng
+                    </div>
+                    <div class="details"><span>Năm vào trường:</span> 2022</div>
+                    <div class="details"><span>Bậc đào tạo:</span> Cử nhân</div>
+                    <div class="details">
+                      <span>Chương trình:</span> Khoa học máy tính
+                    </div>
+                    <div class="details"><span>MSSV:</span> 20220047</div>
+                    <div class="details"><span>Giới tính:</span> Nam</div>
+                    <div class="details"><span>Lớp:</span> IT1-01</div>
+                    <div class="details"><span>Khóa học:</span> 67</div>
+                    <div class="details">
+                      <span>Email:</span> tung.nn220047@sis.hust.edu.vn
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="student-infor2" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__custom">Thông tin học tập</div>
+                <div class="class-info__content">
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Tổng kết học kỳ:
+                        </div>
+                        <span class="class-info__item-value"> 20241 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Số tín chỉ tích lũy:
+                        </div>
+                        <span class="class-info__item-value"> 68 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">CPA:</div>
+                        <span class="class-info__item-value"> 3.49 </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-info__content-item">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">
+                          Trình độ sinh viên:
+                        </div>
+                        <span class="class-info__item-value"> Năm 3 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Số tín chỉ nợ:</div>
+                        <span class="class-info__item-value"> 0 </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Mức cảnh cáo:</div>
+                        <span class="class-info__item-value"> M0 </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="student-info3" class="container info-container">
+              <div id="class-info">
+                <div class="class-info__custom">Kỹ năng</div>
+                <div class="class-info__content">
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Ngôn ngữ:</div>
+                        <span class="class-info__item-value">
+                          HTML, CSS, JavaScript, Java, C/C++
+                        </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Framework:</div>
+                        <span class="class-info__item-value">
+                          ReactJS, NodeJS, Express
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="class-info__content-item one-row">
+                    <div class="class-info__group">
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">Công cụ:</div>
+                        <span class="class-info__item-value">
+                          Git, VSCode, Postman,...
+                        </span>
+                      </div>
+                      <div class="class-info__group-item">
+                        <div class="class-info__item-title">CSDL:</div>
+                        <span class="class-info__item-value">
+                          SQL, MySQL, mongoDB
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="footer-container">
+            <h4>Liên hệ với chúng tôi</h4>
+            <p>Email: tung@gmail.com | Hotline: 0123-456-789</p>
+            <p>Địa chỉ: Số 19, ngõ Trại Cá, Trương Định</p>
+            <p>
+              Theo dõi chúng tôi:
+              <a href="#">Facebook</a> | <a href="#">Twitter</a> |
+              <a href="#">Instagram</a>
+            </p>
+          </div>
+
+          <div class="footer-bottom">
+            <p>
+              © 2025 Công ty TungTung. All rights reserved. |
+              <a href="#">Chính sách bảo mật</a>
+            </p>
+          </div>
+        </footer>
+      </div>
+
+      <!-- END MAIN -->
+    </div>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
